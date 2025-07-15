@@ -21,9 +21,6 @@ export async function POST(req: NextRequest) {
       forgotPasswordTokenExpiry: { $gt: Date.now() },
     });
 
-    console.log("Incoming:", { token, email, newPassword });
-console.log("User from DB:", user);
-
 
     if (!user) {
       return NextResponse.json(
@@ -33,7 +30,6 @@ console.log("User from DB:", user);
     }
 
     const isValid = await bcrypt.compare(token, user.forgotPasswordToken);
-    console.log(isValid)
     if (!isValid) {
       return NextResponse.json({ error: "Invalid token" }, { status: 400 });
     }
