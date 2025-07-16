@@ -97,6 +97,10 @@ export default function ResetPasswordPage() {
           🔒 Reset Password
         </h2>
 
+      <div className="relative">
+          <label className="p-2 block text-sm font-medium text-gray-700">
+            Email
+          </label>
         <input
             type="email"
             placeholder="Enter your email"
@@ -105,7 +109,7 @@ export default function ResetPasswordPage() {
             required
             className="w-full px-4 py-2 text-black border border-gray-400 rounded-xl mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
-
+      </div>
 
         <div className="relative">
           <label className="p-2 block text-sm font-medium text-gray-700">

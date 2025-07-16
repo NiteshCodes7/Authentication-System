@@ -37,6 +37,9 @@ export default function ForgotPasswordPage() {
         </h2>
 
         <div className="space-y-4">
+          <label htmlFor="email">
+            Email
+          </label>
           <input
             type="email"
             placeholder="Enter your email"
